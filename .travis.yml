@@ -4,3 +4,12 @@ script: cd App; ant main; cd -
 jdk:
   - oraclejdk7
   - oraclejdk8
+deploy:
+   edge: true
+   provider: cloudfoundry
+   username: jagan.kumar.rajamani@verizon.com
+   password: verizon1
+   api: https://api.run.pivotal.io
+   organization: jag.org
+   space: development  
+
