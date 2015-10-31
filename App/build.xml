@@ -16,7 +16,7 @@
     <!-- Allow jar to be picked up locally -->
 	    <path id="jmeter.classpath">
 	        <fileset dir="${basedir}/jmeter/bin">
-	          <include name="ApacheJMeter.jar"/>
+	          <include name="ant-jmeter-1.1.1.jar"/>
 	        </fileset>
 	    </path>
 	
@@ -35,7 +35,7 @@
 	</taskdef>   
 	
 	
-	<taskdef name="jmeter" classpathref="jmeter.classpath" classname="org.programmerplanet.ant.taskdefs.jmeter.JMeterTask"/>
+	<taskdef name="jmeter"  classpathref= "jmeter.classpath"  classname="org.programmerplanet.ant.taskdefs.jmeter.JMeterTask"/>
 	
 	
 		<path id="compile.classpath">
@@ -116,7 +116,7 @@
 	        <echo>funcMode = ${funcMode}</echo>
 	  	<!--   -->
 	        <jmeter
-	        	jmeterhome="${basedir}/lib"
+	        	jmeterhome="${basedir}/jmeter"
 	            testplan ="${basedir}/${test}.jmx"
 	            resultlog="${basedir}/${test}.jtl">
 
