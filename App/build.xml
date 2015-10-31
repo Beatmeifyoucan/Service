@@ -13,6 +13,13 @@
 			<pathelement location= "${bin.dir}"/>
 	</path>
 	
+    <!-- Allow jar to be picked up locally -->
+	    <path id="jmeter.classpath">
+	        <fileset dir="${basedir}/jmeter/bin">
+	          <include name="ApacheJMeter.jar"/>
+	        </fileset>
+	    </path>
+	
 	<taskdef name="testng" classname="org.testng.TestNGAntTask"> 
 		<classpath>
 			<pathelement location="${lib.dir}/testng-6.9.4.jar"></pathelement>
@@ -28,11 +35,7 @@
 	</taskdef>   
 	
 	
-	<taskdef name="jmeter" classname="org.programmerplanet.ant.taskdefs.jmeter.JMeterTask">
-		<classpath>
-			<pathelement location="${lib.dir}/ant-jmeter-1.1.1.jar"></pathelement>
-		</classpath>
-	</taskdef>
+	<taskdef name="jmeter" classpathref="jmeter.classpath" classname="org.programmerplanet.ant.taskdefs.jmeter.JMeterTask"/>
 	
 	
 		<path id="compile.classpath">
@@ -41,8 +44,6 @@
 			</fileset>
 		</path>
 	
-	    <property name="testpath" value="C:/Users/Administrator/Downloads/apache-jmeter-2.13/apache-jmeter-2.13/bin"/>
-	    <property name="jmeter.home" value="C:/Users/Administrator/Downloads/apache-jmeter-2.13/apache-jmeter-2.13"/>
 	    <property name="report.title" value="Load Test Results"/>
 	    
 	    <!-- Name of test (without .jmx) -->
@@ -71,12 +72,7 @@
 	      </not>
 	    </condition>
 
-	    <!-- Allow jar to be picked up locally -->
-	    <path id="jmeter.classpath">
-	        <fileset dir="${basedir}">
-	          <include name="ant-jmeter*.jar"/>
-	        </fileset>
-	    </path>
+	
 
 	
 		<target name="clean">
@@ -118,10 +114,10 @@
 	
 	  <target name="run">
 	        <echo>funcMode = ${funcMode}</echo>
-	        <delete file="${testpath}/${test}.html"/>
+	  	<!--   -->
 	        <jmeter
-	            jmeterhome="${jmeter.home}"
-	            testplan ="${testpath}/${test}.jmx"
+	        	jmeterhome="${basedir}/lib"
+	            testplan ="${basedir}/${test}.jmx"
 	            resultlog="${basedir}/${test}.jtl">
 
 	        	<!-- Force suitable defaults -->
