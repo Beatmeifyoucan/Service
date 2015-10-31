@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Test-All" duration-ms="185" started-at="2015-10-31T17:49:55Z" finished-at="2015-10-31T17:49:55Z">
+    <groups>
+    </groups>
+    <test name="TestGroup" duration-ms="185" started-at="2015-10-31T17:49:55Z" finished-at="2015-10-31T17:49:55Z">
+      <class name="TestCase1">
+        <test-method status="PASS" signature="serviceCall()[pri:0, instance:TestCase1@6adc0b2f]" name="serviceCall" duration-ms="151" started-at="2015-10-31T10:49:55Z" finished-at="2015-10-31T10:49:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- serviceCall -->
+      </class> <!-- TestCase1 -->
+    </test> <!-- TestGroup -->
+  </suite> <!-- Test-All -->
+</testng-results>
