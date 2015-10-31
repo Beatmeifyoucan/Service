@@ -1,0 +1,6 @@
+applications:
+  - name: App
+    buildpack: java_buildpack
+    path: App/dist/Service.jar
+    services:
+      - MySQL
