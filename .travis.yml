@@ -3,3 +3,4 @@ install: cd App; ant deps; cd -
 script: cd App; ant main; cd -
 jdk:
   - oraclejdk7
+  - oraclejdk8
