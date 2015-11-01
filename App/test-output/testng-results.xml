@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Test-All" duration-ms="181" started-at="2015-10-31T18:11:46Z" finished-at="2015-10-31T18:11:46Z">
+  <suite name="Test-All" duration-ms="57" started-at="2015-11-01T06:43:39Z" finished-at="2015-11-01T06:43:39Z">
     <groups>
     </groups>
-    <test name="TestGroup" duration-ms="181" started-at="2015-10-31T18:11:46Z" finished-at="2015-10-31T18:11:46Z">
-      <class name="TestCase1">
-        <test-method status="PASS" signature="serviceCall()[pri:0, instance:TestCase1@608d70a6]" name="serviceCall" duration-ms="152" started-at="2015-10-31T11:11:46Z" finished-at="2015-10-31T11:11:46Z">
+    <test name="TestGroup" duration-ms="57" started-at="2015-11-01T06:43:39Z" finished-at="2015-11-01T06:43:39Z">
+      <class name="TestCase2">
+        <test-method status="PASS" signature="serviceCall()[pri:0, instance:TestCase2@2552fafd]" name="serviceCall" duration-ms="29" started-at="2015-10-31T23:43:39Z" finished-at="2015-10-31T23:43:39Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- serviceCall -->
-      </class> <!-- TestCase1 -->
+      </class> <!-- TestCase2 -->
     </test> <!-- TestGroup -->
   </suite> <!-- Test-All -->
 </testng-results>

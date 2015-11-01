@@ -8,7 +8,7 @@ import java.sql.Statement;
 public class DbCall {
 
 	static final String JDBC_DRIVER = "com.mysql.jdbc.Driver";  
-	static final String DB_URL = "jdbc:mysql://localhost/myapp_test";
+	static final String DB_URL = "jdbc:mysql://localhost:3306/myapp_test";
 	static final String USER = "root";
    	static final String PASS = "verizon1";
 	static Connection conn = null;

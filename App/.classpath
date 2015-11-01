@@ -18,6 +18,6 @@
 	<classpathentry kind="lib" path="lib/xalan-2.7.2.jar"/>
 	<classpathentry kind="lib" path="lib/javax.activation.jar"/>
 	<classpathentry kind="lib" path="lib/mail-1.4.7.jar"/>
-	<classpathentry kind="lib" path="lib/mysql-connector-java-5.1.6.jar"/>
+	<classpathentry kind="lib" path="lib/mysql-connector-java-5.1.22-bin.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
