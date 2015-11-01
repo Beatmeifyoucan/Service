@@ -13,6 +13,7 @@
 			<pathelement location= "${lib.dir}/mysql-connector-java-5.1.22-bin.jar"/>
 			<pathelement location= "${lib.dir}/javax.mail.jar"/>
 			<pathelement location= "${lib.dir}/javax.activation.jar"/>
+			<pathelement location= "${lib.dir}/ant-javamail-1.9.6.jar"/>
 			<pathelement location= "${bin.dir}"/>
 	</path>
 	

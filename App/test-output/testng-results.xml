@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Test-All" duration-ms="245" started-at="2015-11-01T08:56:40Z" finished-at="2015-11-01T08:56:40Z">
+  <suite name="Test-All" duration-ms="202" started-at="2015-11-01T09:08:59Z" finished-at="2015-11-01T09:08:59Z">
     <groups>
     </groups>
-    <test name="TestGroup" duration-ms="245" started-at="2015-11-01T08:56:40Z" finished-at="2015-11-01T08:56:40Z">
+    <test name="TestGroup" duration-ms="202" started-at="2015-11-01T09:08:59Z" finished-at="2015-11-01T09:08:59Z">
       <class name="TestCase1">
-        <test-method status="PASS" signature="serviceCall()[pri:0, instance:TestCase1@5bee9e20]" name="serviceCall" duration-ms="203" started-at="2015-11-01T01:56:40Z" finished-at="2015-11-01T01:56:40Z">
+        <test-method status="PASS" signature="serviceCall()[pri:0, instance:TestCase1@dd86b03]" name="serviceCall" duration-ms="172" started-at="2015-11-01T01:08:59Z" finished-at="2015-11-01T01:08:59Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- serviceCall -->
