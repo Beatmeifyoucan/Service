@@ -31,13 +31,7 @@
 	</taskdef>
 	
 	
-	<taskdef name="mail" classname="org.apache.tools.ant.taskdefs.email.EmailTask" >
-	     <classpath  id="mailTaskPath">                                     
-	                <pathelement path="${lib.dir}/javax.mail.jar"/> 
-	                <pathelement path="${lib.dir}/javax.activation.jar"/>
-	     			<pathelement path="${lib.dir}/ant-javamail-1.9.6.jar"/>
-	     </classpath>                                   
-	</taskdef>   
+	<taskdef name="mail" classpathref="cp" classname="org.apache.tools.ant.taskdefs.email.EmailTask" />
 	
 	
 	<taskdef name="jmeter" classname="org.programmerplanet.ant.taskdefs.jmeter.JMeterTask">
