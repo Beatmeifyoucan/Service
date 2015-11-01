@@ -12,7 +12,7 @@ public class DbCall {
 		try{
 		      Class.forName("com.mysql.jdbc.Driver");
 		      System.out.println("Connecting to database...");
-		      conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/myapp_test","root","verizon1");
+		      conn = DriverManager.getConnection("jdbc:mysql://127.0.0.1/myapp_test","travis","");
 		      System.out.println("Creating statement.......");
 		      stmt = conn.createStatement();
 		      String sql;
