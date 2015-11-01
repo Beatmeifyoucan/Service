@@ -4,7 +4,7 @@ public class TestCase1 {
 	
 	@Test
 	public void serviceCall() throws Exception{
-		//ServiceCall.restServiceCall();
+		ServiceCall.restServiceCall();
 		System.out.println("test service ...");
 	}
 

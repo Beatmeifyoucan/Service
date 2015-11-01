@@ -7,7 +7,8 @@ public class ServiceCall {
 	private final static String USER_AGENT = "Mozilla/5.0";
 	public static void restServiceCall(){
 		try{
-			String url = "http://113.128.164.219:7001/RestServiceApp/verizon/employeeSearch";
+			//String url = "http://113.128.164.219:7001/RestServiceApp/verizon/employeeSearch";
+			String url = "http://www.thomas-bayer.com/sqlrest/CUSTOMER/3/";
 			URL obj = new URL(url);
 			HttpURLConnection con = (HttpURLConnection) obj.openConnection();
 			con.setRequestMethod("GET");
@@ -19,6 +20,7 @@ public class ServiceCall {
 			String inputLine;
 			StringBuffer response = new StringBuffer();
 			while ((inputLine = in.readLine()) != null) {
+				System.out.println("hello" +inputLine);
 				response.append(inputLine);
 			}
 			
