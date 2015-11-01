@@ -24,14 +24,6 @@
 	        </fileset>
 	    </path>
 	
-	 	<path id="mail.classpath">
-		        <fileset dir="${basedir}/mail/bin">
-		          <include name="ant-javamail-1.9.6.jar"/>
-		        	<include name="activation-1.1.1.jar"/>
-		          	<include name="javax.mail.jar"/>
-		        </fileset>
-		 </path>
-	
 	<taskdef name="testng" classname="org.testng.TestNGAntTask"> 
 		<classpath>
 			<pathelement location="${lib.dir}/testng-6.9.4.jar"></pathelement>
