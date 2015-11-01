@@ -6,7 +6,7 @@ before_script:
   'create table employee(id int, name varchar(20), company varchar(20));'
   'insert into employee values (100, "Manju", "verizon");'
   'insert into employee values (101, "Vignesh", "verizon");'
-  'insert into employee values (102, "Jagan", "verizon");'
+  'insert into employee values (102, "JaganR", "verizon");'
 script: cd App; ant main; cd -
 jdk:
   - oraclejdk7
