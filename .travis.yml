@@ -1,7 +1,11 @@
 language: java
 install: cd App; ant deps; cd -
 before_script:
-  - mysql -e 'create table employee;'
+  - mysql -e 'use myapp_test;'
+  - mysql -e 'create table employee(id int, name varchar(20), company varchar(20));'
+  - mysql -e 'insert into employee values (100, "Manju", "verizon");'
+  - mysql -e 'insert into employee values (101, "Vignesh", "verizon");'
+  - mysql -e 'insert into employee values (102, "Jagan", "verizon");'
 script: cd App; ant main; cd -
 jdk:
   - oraclejdk7
