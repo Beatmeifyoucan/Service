@@ -2,7 +2,7 @@ language: java
 install: cd App; ant deps; cd -
 before_script:
  - mysql -e 'create database IF NOT EXISTS myapp_test;use myapp_test;create table employee(id int, name varchar(20), company varchar(20)); insert into employee values (100, "Manju", "verizon");'
-script: cd App; ant main; cd -
+script: cd App; ant all; cd -
 jdk:
   - oraclejdk7
   - oraclejdk8
