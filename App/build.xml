@@ -140,12 +140,14 @@
     
 	
 	<target name="mail">
+		
 	<mail from="jagan.kumar.rajamani@verizon.com"
 		tolist="vignesh.velappan@verizon.com"
 		mailhost="bagate.verizon.com"
 	    subject="Build Log"
 	    message="End 2 End Automation Testing "
 		files = "${basedir}/${test}.html"/>
+		<echo> Sending Mail ...  </echo>
 	</target>
 	
 	
