@@ -25,8 +25,10 @@
 	    </path>
 	
 	 	<path id="mail.classpath">
-		        <fileset dir="${basedir}/lib">
+		        <fileset dir="${basedir}/mail/bin">
 		          <include name="ant-javamail-1.9.6.jar"/>
+		        	<include name="activation-1.1.1.jar"/>
+		          	<include name="javax.mail.jar"/>
 		        </fileset>
 		 </path>
 	
