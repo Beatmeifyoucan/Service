@@ -1,5 +1,7 @@
 language: java
 install: cd App; ant deps; cd -
+before_script:
+  - mysql -e 'create database myapp_test;
 script: cd App; ant main; cd -
 jdk:
   - oraclejdk7
