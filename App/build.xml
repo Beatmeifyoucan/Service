@@ -32,8 +32,8 @@
 	
 	<taskdef name="mail" classname="org.apache.tools.ant.taskdefs.email.EmailTask" >
 	     <classpath  id="mailTaskPath">                                     
-	                <pathelement path="${lib.dir}/javax.mail.jar"/> 
-	                <pathelement path="${lib.dir}/javax.activation.jar"/>
+	                <pathelement location="${lib.dir}/javax.mail.jar"/> 
+	                <pathelement location="${lib.dir}/javax.activation.jar"/>
 	     </classpath>                                   
 	</taskdef>   
 	
