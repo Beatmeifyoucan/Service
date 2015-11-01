@@ -6,18 +6,13 @@ import java.sql.Statement;
 
 
 public class DbCall {
-
-	static final String JDBC_DRIVER = "com.mysql.jdbc.Driver";  
-	static final String DB_URL = "jdbc:mysql://localhost:3306/myapp_test";
-	static final String USER = "root";
-   	static final String PASS = "verizon1";
 	static Connection conn = null;
 	static Statement stmt = null;
 	public static void main(String[] args) {
 		try{
 		      Class.forName("com.mysql.jdbc.Driver");
 		      System.out.println("Connecting to database...");
-		      conn = DriverManager.getConnection(DB_URL,USER,PASS);
+		      conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/myapp_test","root","verizon1");
 		      System.out.println("Creating statement.......");
 		      stmt = conn.createStatement();
 		      String sql;
