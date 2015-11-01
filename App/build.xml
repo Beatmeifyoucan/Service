@@ -1,204 +1,204 @@
 <?xml version="1.0"?>
 <project name="ant-jmeter" default="all">
 
-	<property name="src.dir" location="src"/>
-	<property name="bin.dir" location="bin"/>
-	<property name="dist.dir" location="dist"/>
-	<property name="lib.dir" location="lib"/>
-	<property name="resources.dir" location="resources"/>
-	
+	<property name="src.dir" location="src" />
+	<property name="bin.dir" location="bin" />
+	<property name="dist.dir" location="dist" />
+	<property name="lib.dir" location="lib" />
+	<property name="resources.dir" location="resources" />
+
 	<path id="cp">
-			<pathelement location= "${lib.dir}/jcommander.jar"/>
-			<pathelement location= "${lib.dir}/testng-6.9.4.jar"/>
-			<pathelement location= "${lib.dir}/mysql-connector-java-5.1.22-bin.jar"/>
-			<pathelement location= "${lib.dir}/javax.mail.jar"/>
-			<pathelement location= "${lib.dir}/activation-1.1.1.jar"/>
-			<pathelement location= "${lib.dir}/ant-javamail-1.9.6.jar"/>
-			<pathelement location= "${bin.dir}"/>
+		<pathelement location="${lib.dir}/jcommander.jar" />
+		<pathelement location="${lib.dir}/testng-6.9.4.jar" />
+		<pathelement location="${lib.dir}/mysql-connector-java-5.1.22-bin.jar" />
+		<pathelement location="${lib.dir}/mail-1.4.7.jar" />
+		<pathelement location="${lib.dir}/activation-1.1.1.jar" />
+		<pathelement location="${lib.dir}/ant-javamail-1.9.6.jar" />
+		<pathelement location="${bin.dir}" />
 	</path>
-	
-    <!-- Allow jar to be picked up locally -->
-	    <path id="jmeter.classpath">
-	        <fileset dir="${basedir}/jmeter/bin">
-	          <include name="ApacheJMeter.jar"/>
-	        </fileset>
-	    </path>
-	
-	<taskdef name="testng" classname="org.testng.TestNGAntTask"> 
+
+	<!-- Allow jar to be picked up locally -->
+	<path id="jmeter.classpath">
+		<fileset dir="${basedir}/jmeter/bin">
+			<include name="ApacheJMeter.jar" />
+		</fileset>
+	</path>
+
+	<taskdef name="testng" classname="org.testng.TestNGAntTask">
 		<classpath>
 			<pathelement location="${lib.dir}/testng-6.9.4.jar"></pathelement>
 		</classpath>
 	</taskdef>
-	
-	
-	<taskdef name="mail" classname="org.apache.tools.ant.taskdefs.email.EmailTask" >
-		<classpath>                                     
-				        <pathelement path="${lib.dir}/ant-javamail-1.9.6.jar"/> 
-						<pathelement path="${lib.dir}/javax.mail.jar"/> 
-				        <pathelement path="${lib.dir}/activation-1.1.1.jar"/> 
-		</classpath>                                   
-	</taskdef> 
-	
-	
-	<taskdef name="jmeter" classname="org.programmerplanet.ant.taskdefs.jmeter.JMeterTask">
-		<classpath>                                     
-		        <pathelement path="${lib.dir}/ant-jmeter-1.1.1.jar"/> 
-		 </classpath>                                   
-	</taskdef> 
-	
-	
-		<path id="compile.classpath">
-			<fileset dir="${lib.dir}">
-				<include name="*.jar"/>
-			</fileset>
-		</path>
-	
-	    <property name="report.title" value="Load Test Results"/>
-	    
-	    <!-- Name of test (without .jmx) -->
-	    <property name="test" value="Test"/>
-	    
-	    <!-- Should report include response data for failures? -->
-	    <property name="show-data" value="n"/>
 
-	    <property name="format" value="2.1"/>
-	    
-	    <condition property="style_version" value="">
-	        <equals arg1="${format}" arg2="2.0"/>
-	    </condition>
 
-	    <condition property="style_version" value="_21">
-	        <equals arg1="${format}" arg2="2.1"/>
-	    </condition>
+	<taskdef name="mail" classname="org.apache.tools.ant.taskdefs.email.EmailTask">
+		<classpath>
+			<pathelement path="${lib.dir}/ant-javamail-1.9.6.jar" />
+			<pathelement path="${lib.dir}/mail-1.4.7.jar" />
+			<pathelement path="${lib.dir}/activation-1.1.1.jar" />
+		</classpath>
+	</taskdef>
 
-	    <condition property="funcMode">
-	        <equals arg1="${show-data}" arg2="y"/>
-	    </condition>
-	    
-	    <condition property="funcMode" value="false">
-	      <not>
-	        <equals arg1="${show-data}" arg2="y"/>
-	      </not>
-	    </condition>
 
-		<target name="clean">
-			<delete dir="${bin.dir}"/>
-			<delete dir="${dist.dir}"/>
-			<delete file="Test.html"/>
-			<delete file="Test.jtl"/>
-		</target>
-		
-		<target name="makedir">
-			<mkdir dir="${bin.dir}"/>
-			<mkdir dir="${dist.dir}" />
-		</target>
-		
-		<target name="compile" depends="clean, makedir" >
-			<javac srcdir= "${src.dir}" destdir="${bin.dir}" debug="true" includeantruntime="false">
-				<classpath refid="compile.classpath"/>
-			</javac>
-		</target>
-		
-		<target name="test" depends="compile">
-			<testng classpathref="cp" useDefaultListeners="true">
-				<classpath location ="${bin.dir}" />
-				<classfileset dir="${bin.dir}" includes="NewTestCase1.class"/>
-				<xmlfileset dir="${resources.dir}" includes="testng.xml"/>
-			</testng>
-		</target>
-		
-		<target name="jar" depends="test">
-			<jar destfile="${dist.dir}/Service.jar" basedir="${bin.dir}">
-				<fileset dir="lib"/>
-			</jar>
-		</target>
-		
-		<target name="main" depends="jar">
-			<description>Execute Main Target</description>
-		</target>
-		
-	
-	  <target name="run">
-	        <echo>funcMode = ${funcMode}</echo>
-	  	<!--   -->
-	        <jmeter
-	        	jmeterhome="${basedir}/jmeter"
-	            testplan ="${basedir}/${test}.jmx"
-	            resultlog="${basedir}/${test}.jtl">
+	<taskdef name="jmeter"
+		classname="org.programmerplanet.ant.taskdefs.jmeter.JMeterTask">
+		<classpath>
+			<pathelement path="${lib.dir}/ant-jmeter-1.1.1.jar" />
+		</classpath>
+	</taskdef>
 
-	        	<!-- Force suitable defaults -->
-	            <property name="jmeter.save.saveservice.output_format" value="xml"/>
-	            <property name="jmeter.save.saveservice.assertion_results" value="all"/>
-	            <property name="jmeter.save.saveservice.bytes" value="true"/>
-	            <property name="file_format.testlog" value="${format}"/>
-	            <property name="jmeter.save.saveservice.response_data.on_error" value="${funcMode}"/>
-	        </jmeter>
-	    </target>
-	
-	 <target name="report" depends="xslt-report">
-	        <echo>Report generated at ${report.datestamp}</echo>
-	  </target>
-    
-	
-	<target name="mail">
-	<mail from="jagan.kumar.rajamani@verizon.com"
-		tolist="vignesh.velappan@verizon.com"
-		mailhost="bagate.verizon.com"
-	    subject="End 2 End Automation Testing"
-	    message="Please refer the attachment for recent automation test results .. "
-		files = "${basedir}/${test}.html"  />
+
+	<path id="compile.classpath">
+		<fileset dir="${lib.dir}">
+			<include name="*.jar" />
+		</fileset>
+	</path>
+
+	<property name="report.title" value="Load Test Results" />
+
+	<!-- Name of test (without .jmx) -->
+	<property name="test" value="Test" />
+
+	<!-- Should report include response data for failures? -->
+	<property name="show-data" value="n" />
+
+	<property name="format" value="2.1" />
+
+	<condition property="style_version" value="">
+		<equals arg1="${format}" arg2="2.0" />
+	</condition>
+
+	<condition property="style_version" value="_21">
+		<equals arg1="${format}" arg2="2.1" />
+	</condition>
+
+	<condition property="funcMode">
+		<equals arg1="${show-data}" arg2="y" />
+	</condition>
+
+	<condition property="funcMode" value="false">
+		<not>
+			<equals arg1="${show-data}" arg2="y" />
+		</not>
+	</condition>
+
+	<target name="clean"
+		description="Deleting class files, resulted jar, jtl and html ...">
+		<delete dir="${bin.dir}" />
+		<delete dir="${dist.dir}" />
+		<delete file="Test.html" />
+		<delete file="Test.jtl" />
+	</target>
+
+	<target name="makedir" description="Creating new directories ...">
+		<mkdir dir="${bin.dir}" />
+		<mkdir dir="${dist.dir}" />
+	</target>
+
+	<target name="compile" depends="clean, makedir">
+		<javac srcdir="${src.dir}" destdir="${bin.dir}" debug="true"
+			includeantruntime="false">
+			<classpath refid="compile.classpath" />
+		</javac>
+	</target>
+
+	<target name="test" depends="compile">
+		<testng classpathref="cp" useDefaultListeners="true">
+			<classpath location="${bin.dir}" />
+			<classfileset dir="${bin.dir}" includes="NewTestCase1.class" />
+			<xmlfileset dir="${resources.dir}" includes="testng.xml" />
+		</testng>
+	</target>
+
+	<target name="jar" depends="test">
+		<jar destfile="${dist.dir}/Service.jar" basedir="${bin.dir}">
+			<fileset dir="lib" />
+		</jar>
+	</target>
+
+	<target name="main" depends="jar">
+		<description>Execute Main Target</description>
+	</target>
+
+
+	<target name="run">
+		<echo>funcMode = ${funcMode}</echo>
+		<!-- -->
+		<jmeter jmeterhome="${basedir}/jmeter" testplan="${basedir}/${test}.jmx"
+			resultlog="${basedir}/${test}.jtl">
+
+			<!-- Force suitable defaults -->
+			<property name="jmeter.save.saveservice.output_format"
+				value="xml" />
+			<property name="jmeter.save.saveservice.assertion_results"
+				value="all" />
+			<property name="jmeter.save.saveservice.bytes" value="true" />
+			<property name="file_format.testlog" value="${format}" />
+			<property name="jmeter.save.saveservice.response_data.on_error"
+				value="${funcMode}" />
+		</jmeter>
+	</target>
+
+	<target name="report" depends="xslt-report">
+		<echo>Report generated at ${report.datestamp}</echo>
+	</target>
+
+
+	<target name="mail" description="Sending mail to stakeholders ...">
+		<mail from="jagan.kumar.rajamani@verizon.com" tolist="vignesh.velappan@verizon.com"
+			mailhost="bagate.verizon.com" subject="End 2 End Automation Testing"
+			message="Please refer the attachment for recent automation test results .. "
+			files="${basedir}/${test}.html" />
 		<echo> Sending Mail ...  </echo>
 	</target>
-	
-	
-    <target name="all" depends="main,run,report,mail"/>
 
-  
 
-    <property name="lib.dir" value="${jmeter.home}/lib"/>
+	<target name="all" depends="main,run,report,mail" />
 
-    <!-- Use xalan copy from JMeter lib directory to ensure consistent processing with Java 1.4+ -->
-    <path id="xslt.classpath">
-        <fileset dir="${lib.dir}" includes="xalan*.jar"/>
-        <fileset dir="${lib.dir}" includes="serializer*.jar"/>
-    </path>
+	<property name="lib.dir" value="${jmeter.home}/lib" />
 
-   
+	<!-- Use xalan copy from JMeter lib directory to ensure consistent processing 
+		with Java 1.4+ -->
+	<path id="xslt.classpath">
+		<fileset dir="${lib.dir}" includes="xalan*.jar" />
+		<fileset dir="${lib.dir}" includes="serializer*.jar" />
+	</path>
 
-    <target name="xslt-report" depends="_message_xalan">
-        <tstamp><format property="report.datestamp" pattern="yyyy/MM/dd HH:mm"/></tstamp>
-        <xslt
-            classpathref="xslt.classpath"
-            force="true"
-            in="${basedir}/${test}.jtl"
-            out="${basedir}/${test}.html"
-            style="${basedir}/jmeter-results-detail-report${style_version}.xsl">
-            <param name="showData" expression="${show-data}"/>
-            <param name="titleReport" expression="${report.title}"/>
-            <param name="dateReport" expression="${report.datestamp}"/>
-        </xslt>
-    </target>
+	<target name="xslt-report" depends="_message_xalan">
+		<tstamp>
+			<format property="report.datestamp" pattern="yyyy/MM/dd HH:mm" />
+		</tstamp>
+		<xslt classpathref="xslt.classpath" force="true"
+			in="${basedir}/${test}.jtl" out="${basedir}/${test}.html"
+			style="${basedir}/jmeter-results-detail-report${style_version}.xsl">
+			<param name="showData" expression="${show-data}" />
+			<param name="titleReport" expression="${report.title}" />
+			<param name="dateReport" expression="${report.datestamp}" />
+		</xslt>
+	</target>
 
-    <target name="verify-images">
-        <condition property="samepath">
-                <equals arg1="${testpath}" arg2="${basedir}" />
-        </condition>
-    </target>
+	<target name="verify-images">
+		<condition property="samepath">
+			<equals arg1="${testpath}" arg2="${basedir}" />
+		</condition>
+	</target>
 
-    <!-- Check that the xalan libraries are present -->
-    <condition property="xalan.present">
-          <and>
-              <!-- No need to check all jars; just check a few -->
-            <available classpathref="xslt.classpath" classname="org.apache.xalan.processor.TransformerFactoryImpl"/>
-            <available classpathref="xslt.classpath" classname="org.apache.xml.serializer.ExtendedContentHandler"/>
-          </and>
-    </condition>
+	<!-- Check that the xalan libraries are present -->
+	<condition property="xalan.present">
+		<and>
+			<!-- No need to check all jars; just check a few -->
+			<available classpathref="xslt.classpath"
+				classname="org.apache.xalan.processor.TransformerFactoryImpl" />
+			<available classpathref="xslt.classpath"
+				classname="org.apache.xml.serializer.ExtendedContentHandler" />
+		</and>
+	</condition>
 
-    <target name="_message_xalan" unless="xalan.present">
-          <echo>Cannot find all xalan and/or serialiser jars</echo>
-        <echo>The XSLT formatting may not work correctly.</echo>
-        <echo>Check you have xalan and serializer jars in ${lib.dir}</echo>
-    </target>
+	<target name="_message_xalan" unless="xalan.present">
+		<echo>Cannot find all xalan and/or serialiser jars</echo>
+		<echo>The XSLT formatting may not work correctly.</echo>
+		<echo>Check you have xalan and serializer jars in ${lib.dir}</echo>
+	</target>
 
 
 </project>
