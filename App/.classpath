@@ -12,7 +12,6 @@
 	<classpathentry kind="lib" path="lib/jira-rest-java-client-0.2-m1.jar"/>
 	<classpathentry kind="lib" path="lib/org-apache-commons-codec.jar"/>
 	<classpathentry kind="lib" path="lib/org-apache-commons-logging.jar"/>
-	<classpathentry kind="lib" path="lib/sqlserverjdbc.jar"/>
 	<classpathentry kind="lib" path="lib/testng-6.9.4.jar"/>
 	<classpathentry kind="lib" path="lib/ant-jmeter-1.1.1.jar"/>
 	<classpathentry kind="lib" path="lib/serializer-2.7.2.jar"/>
