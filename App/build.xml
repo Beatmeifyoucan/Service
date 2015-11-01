@@ -10,9 +10,9 @@
 	<path id="cp">
 			<pathelement location= "${lib.dir}/jcommander.jar"/>
 			<pathelement location= "${lib.dir}/testng-6.9.4.jar"/>
-			<pathelement location="${lib.dir}/mysql-connector-java-5.1.22-bin.jar"/>
-			<pathelement location= "${lib.dir}/mail-1.4.7.jar"/>
-			<pathelement location="${lib.dir}/javax.activation.jar"/>
+			<pathelement location= "${lib.dir}/mysql-connector-java-5.1.22-bin.jar"/>
+			<pathelement location= "${lib.dir}/javax.mail.jar"/>
+			<pathelement location= "${lib.dir}/javax.activation.jar"/>
 			<pathelement location= "${bin.dir}"/>
 	</path>
 	
@@ -32,7 +32,7 @@
 	
 	<taskdef name="mail" classname="org.apache.tools.ant.taskdefs.email.EmailTask" >
 	     <classpath  id="mailTaskPath">                                     
-	                <pathelement path="${lib.dir}/mail-1.4.7.jar"/> 
+	                <pathelement path="${lib.dir}/javax.mail.jar"/> 
 	                <pathelement path="${lib.dir}/javax.activation.jar"/>
 	     </classpath>                                   
 	</taskdef>   
@@ -79,9 +79,6 @@
 	      </not>
 	    </condition>
 
-	
-
-	
 		<target name="clean">
 			<delete dir="${bin.dir}"/>
 			<delete dir="${dist.dir}"/>
@@ -138,17 +135,16 @@
 	
 	 <target name="report" depends="xslt-report">
 	        <echo>Report generated at ${report.datestamp}</echo>
-	    </target>
+	  </target>
     
 	
 	<target name="mail">
-		
 	<mail from="jagan.kumar.rajamani@verizon.com"
 		tolist="vignesh.velappan@verizon.com"
 		mailhost="bagate.verizon.com"
 	    subject="Build Log"
 	    message="End 2 End Automation Testing "
-		files = "${basedir}/${test}.html"/>
+		files = "${basedir}/${test}.html"  />
 		<echo> Sending Mail ...  </echo>
 	</target>
 	

@@ -1,34 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testResults version="1.2">
-<httpSample t="3980" lt="3979" ts="1446367727866" s="false" lb="HTTP Request" rc="404" rm="Not Found" tn="Thread Group 1-4" dt="text" by="1324" ng="30" na="30"/>
-<httpSample t="3980" lt="3980" ts="1446367727866" s="false" lb="HTTP Request" rc="404" rm="Not Found" tn="Thread Group 1-10" dt="text" by="1324" ng="30" na="30"/>
-<httpSample t="5721" lt="5720" ts="1446367727866" s="false" lb="HTTP Request" rc="404" rm="Not Found" tn="Thread Group 1-8" dt="text" by="1324" ng="28" na="28"/>
-<httpSample t="7664" lt="7664" ts="1446367727866" s="false" lb="HTTP Request" rc="404" rm="Not Found" tn="Thread Group 1-1" dt="text" by="1324" ng="27" na="27"/>
-<httpSample t="8096" lt="8096" ts="1446367727865" s="false" lb="HTTP Request" rc="404" rm="Not Found" tn="Thread Group 1-7" dt="text" by="1324" ng="26" na="26"/>
-<httpSample t="8118" lt="8118" ts="1446367727865" s="false" lb="HTTP Request" rc="404" rm="Not Found" tn="Thread Group 1-9" dt="text" by="1324" ng="25" na="25"/>
-<httpSample t="8046" lt="8046" ts="1446367727946" s="false" lb="HTTP Request" rc="404" rm="Not Found" tn="Thread Group 1-11" dt="text" by="1324" ng="24" na="24"/>
-<httpSample t="8140" lt="8140" ts="1446367727865" s="false" lb="HTTP Request" rc="404" rm="Not Found" tn="Thread Group 1-6" dt="text" by="1324" ng="23" na="23"/>
-<httpSample t="8697" lt="8697" ts="1446367728115" s="false" lb="HTTP Request" rc="404" rm="Not Found" tn="Thread Group 1-12" dt="text" by="1324" ng="22" na="22"/>
-<httpSample t="9574" lt="9574" ts="1446367727866" s="false" lb="HTTP Request" rc="404" rm="Not Found" tn="Thread Group 1-3" dt="text" by="1324" ng="21" na="21"/>
-<httpSample t="9574" lt="9574" ts="1446367727866" s="false" lb="HTTP Request" rc="404" rm="Not Found" tn="Thread Group 1-2" dt="text" by="1324" ng="21" na="21"/>
-<httpSample t="9579" lt="9579" ts="1446367727865" s="false" lb="HTTP Request" rc="404" rm="Not Found" tn="Thread Group 1-5" dt="text" by="1324" ng="19" na="19"/>
-<httpSample t="9497" lt="9497" ts="1446367728282" s="false" lb="HTTP Request" rc="404" rm="Not Found" tn="Thread Group 1-13" dt="text" by="1324" ng="18" na="18"/>
-<httpSample t="9200" lt="9200" ts="1446367728632" s="false" lb="HTTP Request" rc="404" rm="Not Found" tn="Thread Group 1-15" dt="text" by="1324" ng="17" na="17"/>
-<httpSample t="8535" lt="8535" ts="1446367729300" s="false" lb="HTTP Request" rc="404" rm="Not Found" tn="Thread Group 1-19" dt="text" by="1324" ng="16" na="16"/>
-<httpSample t="8882" lt="8882" ts="1446367728961" s="false" lb="HTTP Request" rc="404" rm="Not Found" tn="Thread Group 1-17" dt="text" by="1324" ng="15" na="15"/>
-<httpSample t="9007" lt="9007" ts="1446367728846" s="false" lb="HTTP Request" rc="404" rm="Not Found" tn="Thread Group 1-16" dt="text" by="1324" ng="14" na="14"/>
-<httpSample t="8051" lt="8051" ts="1446367729806" s="false" lb="HTTP Request" rc="404" rm="Not Found" tn="Thread Group 1-22" dt="text" by="1324" ng="13" na="13"/>
-<httpSample t="7889" lt="7889" ts="1446367729969" s="false" lb="HTTP Request" rc="404" rm="Not Found" tn="Thread Group 1-23" dt="text" by="1324" ng="13" na="13"/>
-<httpSample t="8396" lt="8396" ts="1446367729466" s="false" lb="HTTP Request" rc="404" rm="Not Found" tn="Thread Group 1-20" dt="text" by="1324" ng="11" na="11"/>
-<httpSample t="8737" lt="8737" ts="1446367729130" s="false" lb="HTTP Request" rc="404" rm="Not Found" tn="Thread Group 1-18" dt="text" by="1324" ng="10" na="10"/>
-<httpSample t="7565" lt="7565" ts="1446367730307" s="false" lb="HTTP Request" rc="404" rm="Not Found" tn="Thread Group 1-25" dt="text" by="1324" ng="9" na="9"/>
-<httpSample t="9422" lt="9422" ts="1446367728450" s="false" lb="HTTP Request" rc="404" rm="Not Found" tn="Thread Group 1-14" dt="text" by="1324" ng="9" na="9"/>
-<httpSample t="7735" lt="7735" ts="1446367730137" s="false" lb="HTTP Request" rc="404" rm="Not Found" tn="Thread Group 1-24" dt="text" by="1324" ng="9" na="9"/>
-<httpSample t="7232" lt="7232" ts="1446367730644" s="false" lb="HTTP Request" rc="404" rm="Not Found" tn="Thread Group 1-27" dt="text" by="1324" ng="6" na="6"/>
-<httpSample t="6905" lt="6905" ts="1446367730972" s="false" lb="HTTP Request" rc="404" rm="Not Found" tn="Thread Group 1-29" dt="text" by="1324" ng="6" na="6"/>
-<httpSample t="7403" lt="7403" ts="1446367730479" s="false" lb="HTTP Request" rc="404" rm="Not Found" tn="Thread Group 1-26" dt="text" by="1324" ng="4" na="4"/>
-<httpSample t="7072" lt="7072" ts="1446367730811" s="false" lb="HTTP Request" rc="404" rm="Not Found" tn="Thread Group 1-28" dt="text" by="1324" ng="4" na="4"/>
-<httpSample t="6748" lt="6748" ts="1446367731145" s="false" lb="HTTP Request" rc="404" rm="Not Found" tn="Thread Group 1-30" dt="text" by="1324" ng="2" na="2"/>
-<httpSample t="8262" lt="8262" ts="1446367729632" s="false" lb="HTTP Request" rc="404" rm="Not Found" tn="Thread Group 1-21" dt="text" by="1324" ng="2" na="2"/>
+<httpSample t="9707" lt="9706" ts="1446368207634" s="false" lb="HTTP Request" rc="404" rm="Not Found" tn="Thread Group 1-5" dt="text" by="1324" ng="30" na="30"/>
+<httpSample t="10106" lt="0" ts="1446368207993" s="false" lb="HTTP Request" rc="Non HTTP response code: org.apache.http.NoHttpResponseException" rm="Non HTTP response message: The target server failed to respond" tn="Thread Group 1-13" dt="text" by="2090" ng="29" na="29"/>
+<httpSample t="10486" lt="10486" ts="1446368207638" s="false" lb="HTTP Request" rc="404" rm="Not Found" tn="Thread Group 1-1" dt="text" by="1324" ng="28" na="28"/>
+<httpSample t="11191" lt="11191" ts="1446368207635" s="false" lb="HTTP Request" rc="404" rm="Not Found" tn="Thread Group 1-2" dt="text" by="1324" ng="27" na="27"/>
+<httpSample t="9496" lt="0" ts="1446368209332" s="false" lb="HTTP Request" rc="Non HTTP response code: org.apache.http.NoHttpResponseException" rm="Non HTTP response message: The target server failed to respond" tn="Thread Group 1-21" dt="text" by="2090" ng="26" na="26"/>
+<httpSample t="11739" lt="11738" ts="1446368207634" s="false" lb="HTTP Request" rc="404" rm="Not Found" tn="Thread Group 1-3" dt="text" by="1324" ng="25" na="25"/>
+<httpSample t="12242" lt="12242" ts="1446368207635" s="false" lb="HTTP Request" rc="404" rm="Not Found" tn="Thread Group 1-10" dt="text" by="1324" ng="24" na="24"/>
+<httpSample t="12248" lt="12248" ts="1446368207635" s="false" lb="HTTP Request" rc="404" rm="Not Found" tn="Thread Group 1-6" dt="text" by="1324" ng="23" na="23"/>
+<httpSample t="9713" lt="0" ts="1446368210171" s="false" lb="HTTP Request" rc="Non HTTP response code: org.apache.http.NoHttpResponseException" rm="Non HTTP response message: The target server failed to respond" tn="Thread Group 1-26" dt="text" by="2090" ng="22" na="22"/>
+<httpSample t="12756" lt="12756" ts="1446368207635" s="false" lb="HTTP Request" rc="404" rm="Not Found" tn="Thread Group 1-4" dt="text" by="1324" ng="21" na="21"/>
+<httpSample t="11382" lt="0" ts="1446368209010" s="false" lb="HTTP Request" rc="Non HTTP response code: org.apache.http.NoHttpResponseException" rm="Non HTTP response message: The target server failed to respond" tn="Thread Group 1-19" dt="text" by="2090" ng="21" na="21"/>
+<httpSample t="12770" lt="12770" ts="1446368207634" s="false" lb="HTTP Request" rc="404" rm="Not Found" tn="Thread Group 1-8" dt="text" by="1324" ng="20" na="20"/>
+<httpSample t="13773" lt="13773" ts="1446368207634" s="false" lb="HTTP Request" rc="404" rm="Not Found" tn="Thread Group 1-7" dt="text" by="1324" ng="18" na="18"/>
+<httpSample t="11571" lt="0" ts="1446368209835" s="false" lb="HTTP Request" rc="Non HTTP response code: org.apache.http.NoHttpResponseException" rm="Non HTTP response message: The target server failed to respond" tn="Thread Group 1-24" dt="text" by="2090" ng="18" na="18"/>
+<httpSample t="13777" lt="13777" ts="1446368207635" s="false" lb="HTTP Request" rc="404" rm="Not Found" tn="Thread Group 1-9" dt="text" by="1324" ng="16" na="16"/>
+<httpSample t="13599" lt="13599" ts="1446368207813" s="false" lb="HTTP Request" rc="404" rm="Not Found" tn="Thread Group 1-12" dt="text" by="1324" ng="16" na="16"/>
+<httpSample t="13783" lt="13783" ts="1446368207651" s="false" lb="HTTP Request" rc="404" rm="Not Found" tn="Thread Group 1-11" dt="text" by="1324" ng="14" na="14"/>
+<httpSample t="10758" lt="0" ts="1446368210677" s="false" lb="HTTP Request" rc="Non HTTP response code: org.apache.http.NoHttpResponseException" rm="Non HTTP response message: The target server failed to respond" tn="Thread Group 1-29" dt="text" by="2090" ng="13" na="13"/>
+<httpSample t="13112" lt="13111" ts="1446368208326" s="false" lb="HTTP Request" rc="404" rm="Not Found" tn="Thread Group 1-15" dt="text" by="1324" ng="13" na="13"/>
+<httpSample t="12950" lt="12950" ts="1446368208490" s="false" lb="HTTP Request" rc="404" rm="Not Found" tn="Thread Group 1-16" dt="text" by="1324" ng="11" na="11"/>
+<httpSample t="11441" lt="0" ts="1446368209998" s="false" lb="HTTP Request" rc="Non HTTP response code: org.apache.http.NoHttpResponseException" rm="Non HTTP response message: The target server failed to respond" tn="Thread Group 1-25" dt="text" by="2090" ng="11" na="11"/>
+<httpSample t="13353" lt="13352" ts="1446368208152" s="false" lb="HTTP Request" rc="404" rm="Not Found" tn="Thread Group 1-14" dt="text" by="1324" ng="9" na="9"/>
+<httpSample t="12848" lt="12848" ts="1446368208657" s="false" lb="HTTP Request" rc="404" rm="Not Found" tn="Thread Group 1-17" dt="text" by="1324" ng="9" na="9"/>
+<httpSample t="10658" lt="0" ts="1446368210849" s="false" lb="HTTP Request" rc="Non HTTP response code: org.apache.http.NoHttpResponseException" rm="Non HTTP response message: The target server failed to respond" tn="Thread Group 1-30" dt="text" by="2090" ng="7" na="7"/>
+<httpSample t="12009" lt="0" ts="1446368209498" s="false" lb="HTTP Request" rc="Non HTTP response code: org.apache.http.NoHttpResponseException" rm="Non HTTP response message: The target server failed to respond" tn="Thread Group 1-22" dt="text" by="2090" ng="7" na="7"/>
+<httpSample t="12687" lt="12687" ts="1446368208822" s="false" lb="HTTP Request" rc="404" rm="Not Found" tn="Thread Group 1-18" dt="text" by="1324" ng="7" na="7"/>
+<httpSample t="11669" lt="11669" ts="1446368210344" s="false" lb="HTTP Request" rc="404" rm="Not Found" tn="Thread Group 1-27" dt="text" by="1324" ng="4" na="4"/>
+<httpSample t="12855" lt="12855" ts="1446368209159" s="false" lb="HTTP Request" rc="404" rm="Not Found" tn="Thread Group 1-20" dt="text" by="1324" ng="4" na="4"/>
+<httpSample t="12358" lt="12358" ts="1446368209659" s="false" lb="HTTP Request" rc="404" rm="Not Found" tn="Thread Group 1-23" dt="text" by="1324" ng="2" na="2"/>
+<httpSample t="11522" lt="11522" ts="1446368210510" s="false" lb="HTTP Request" rc="404" rm="Not Found" tn="Thread Group 1-28" dt="text" by="1324" ng="1" na="1"/>
 
 </testResults>
