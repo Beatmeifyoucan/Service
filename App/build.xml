@@ -27,8 +27,6 @@
 	 	<path id="mail.classpath">
 		        <fileset dir="${basedir}/lib">
 		          <include name="ant-javamail-1.9.6.jar"/>
-		          <include name="javax.mail.jar"/>
-		           <include name="activation-1.1.1.jar"/>
 		        </fileset>
 		 </path>
 	
@@ -39,7 +37,7 @@
 	</taskdef>
 	
 	
-	<taskdef name="mail" classpathref="cp" classname="org.apache.tools.ant.taskdefs.email.EmailTask" >
+	<taskdef name="mail" classname="org.apache.tools.ant.taskdefs.email.EmailTask" >
 		<classpath>                                     
 				        <pathelement path="${lib.dir}/ant-javamail-1.9.6.jar"/> 
 						<pathelement path="${lib.dir}/javax.mail.jar"/> 
