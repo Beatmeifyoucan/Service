@@ -3,7 +3,6 @@
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="lib" path="lib/activation-1.1.1.jar"/>
-	<classpathentry kind="lib" path="lib/ant-javamail-1.9.6.jar"/>
 	<classpathentry kind="lib" path="lib/ant-jmeter-1.1.1.jar"/>
 	<classpathentry kind="lib" path="lib/com.sun.jersey.jersey-core-1.4.0.jar"/>
 	<classpathentry kind="lib" path="lib/commons-httpclient-3.1.jar"/>
@@ -20,5 +19,6 @@
 	<classpathentry kind="lib" path="lib/serializer-2.7.2.jar"/>
 	<classpathentry kind="lib" path="lib/testng-6.9.4.jar"/>
 	<classpathentry kind="lib" path="lib/xalan-2.7.2.jar"/>
+	<classpathentry kind="lib" path="lib/ant-javamail-1.6.5.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
