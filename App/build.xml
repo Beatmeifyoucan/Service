@@ -13,6 +13,7 @@
 		<pathelement location="${lib.dir}/jcommander.jar" />
 		<pathelement location="${lib.dir}/testng-6.9.4.jar" />
 		<pathelement location="${lib.dir}/mysql-connector-java-5.1.22-bin.jar" />
+		<pathelement location="${lib.dir}/javamail-mailapi-1.4.2.jar" />
 		<pathelement location="${bin.dir}" />
 	</path>
 	
