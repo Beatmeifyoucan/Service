@@ -16,23 +16,5 @@ import javax.mail.Session;
     	   }catch(Exception excep){
     		   excep.printStackTrace();
     	   }
-    	   
-	   
-	  /* HtmlEmail email = new HtmlEmail();
-	    //email.setDebug(debugMode);
-	    //email.setBounceAddress("");
-	    email.setBounceAddress("vignesh.velappan@verizon.com");
-	    email.setHostName("bagate.verizon.com");
-	    email.setFrom("jagan.kumar.rajamani@verizon.com");
-	    email.addBcc("vignesh.velappan@verizon.com");
-
-	    email.setSubject("End 2 End Automation Testing");
-	   // email.setAuthentication("jagan.kumar.rajamani@verizon.com", "password");
-	    email.setSSL(true);
-	    email.setSmtpPort(7777);
-	   // email.setHtmlMsg(html);
-	    email.send();*/
-	   
-	    
       }
    }
