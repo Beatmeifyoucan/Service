@@ -164,10 +164,6 @@
 		</mail>
 	</target>
 
-
-	
-
-	
 	
 	<target name="all" depends="main,run,report,mail" />
 
