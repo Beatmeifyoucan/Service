@@ -23,14 +23,7 @@
 			<include name="ApacheJMeter.jar" />
 		</fileset>
 	</path>
-	
-	<!-- SETTING MAIL TASK DEFINITION HERE  -->
-	<path id="mail.classpath">
-			<fileset dir="${lib.dir}">
-				<include name="javamail-mailapi-1.4.2.jar" />
-			</fileset>
-	</path>
-	
+
 
 	<!-- SETTING COMPILE-TIME CLASSPATH HERE  -->
 	<path id="compile.classpath">
@@ -46,8 +39,6 @@
 		</classpath>
 	</taskdef>
 
-
-
 	<!-- SETTING JMETER TASK DEFINITION HERE  -->
 	<taskdef name="jmeter" classname="org.programmerplanet.ant.taskdefs.jmeter.JMeterTask">
 		<classpath>
@@ -56,18 +47,13 @@
 	</taskdef>
 
 
-	<taskdef name="mail" classname="org.apache.tools.ant.taskdefs.email.EmailTask">
-		<classpath>
-			<pathelement path="${lib.dir}/javamail-mailapi-1.4.2.jar" />
-		</classpath>
-	</taskdef>
-	
-	
 	<target name="install-jars">
 		<copy todir="${user.home}/.ant/lib" >  
 		        <fileset dir="${lib.dir}" includes="javamail-mailapi-1.4.2.jar"/>  
 		 </copy>
 	</target>
+	
+	
 
 	<property name="report.title" value="Load Test Results" />
 
@@ -131,7 +117,7 @@
 		</jar>
 	</target>
 
-	<target name="main" depends="jar">
+	<target name="main" depends="jar,install-jars">
 		<description>Execute Main Target</description>
 	</target>
 
@@ -158,7 +144,13 @@
 		<echo>Report generated at ${report.datestamp}</echo>
 	</target>
 
-	<target name="mail" description="Sending mail to stakeholders" depends="install-jars">
+	<taskdef name="mail" classname="org.apache.tools.ant.taskdefs.email.EmailTask">
+				<classpath>
+					<pathelement path="${user.home}/.ant/lib/javamail-mailapi-1.4.2.jar" />
+				</classpath>
+	</taskdef>
+	
+	<target name="mail" description="Sending mail to stakeholders" >
 		<mail charset="ISO-8859-1" mailhost="bagate.verizon.com" subject="End 2 End Automation Testing">
 			<from address="jagan.kumar.rajamani@verizon.com"/>
 		  	<replyto address="vignesh.velappan@verizon.com"/>
@@ -172,6 +164,15 @@
 		</mail>
 	</target>
 
+	
+	
+	<!-- SETTING MAIL TASK DEFINITION HERE  -->
+	<path id="mail.classpath">
+			<fileset dir="${user.home}/.ant/lib">
+				<include name="javamail-mailapi-1.4.2.jar" />
+			</fileset>
+	</path>
+	
 	
 	<target name="all" depends="main,run,report,mail" />
 
