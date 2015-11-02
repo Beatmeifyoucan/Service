@@ -15,7 +15,7 @@
    See the License for the specific language governing permissions and
    limitations under the License.
 -->
-<project name="ant-jmeter" default="all">
+<project name="ant-jmeter" default="war">
     <description>
 
         Sample build file for use with ant-jmeter.jar
