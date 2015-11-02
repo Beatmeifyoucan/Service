@@ -16,5 +16,7 @@
 	<classpathentry kind="lib" path="lib/testng-6.9.4.jar"/>
 	<classpathentry kind="lib" path="lib/xalan-2.7.2.jar"/>
 	<classpathentry kind="lib" path="lib/javamail-mailapi-1.4.2.jar"/>
+	<classpathentry kind="lib" path="lib/org-apache-commons-codec.jar"/>
+	<classpathentry kind="lib" path="lib/org-apache-commons-logging.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
