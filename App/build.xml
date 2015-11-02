@@ -164,7 +164,6 @@
 	</target>
 
 	
-	
 	<!-- SETTING MAIL TASK DEFINITION HERE  -->
 	<path id="mail.classpath">
 			<fileset dir="${user.home}/.ant/lib">
@@ -173,7 +172,7 @@
 	</path>
 	
 	
-	<target name="all" depends="main,run,report,mail" />
+	<target name="all" depends="main,run,report" />
 
 	<!--<property name="lib.dir" value="${jmeter.home}/lib" /> -->
 
