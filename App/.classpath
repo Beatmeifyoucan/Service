@@ -12,14 +12,12 @@
 	<classpathentry kind="lib" path="lib/jersey-apache-client-1.6.jar"/>
 	<classpathentry kind="lib" path="lib/jersey-client-1.7.jar"/>
 	<classpathentry kind="lib" path="lib/jettison-1.2.jar"/>
-	<classpathentry kind="lib" path="lib/jira-rest-java-client-0.2-m1.jar"/>
 	<classpathentry kind="lib" path="lib/jsoup-1.7.2.jar"/>
 	<classpathentry kind="lib" path="lib/mail-1.4.7.jar"/>
 	<classpathentry kind="lib" path="lib/mysql-connector-java-5.1.22-bin.jar"/>
 	<classpathentry kind="lib" path="lib/org-apache-commons-codec.jar"/>
 	<classpathentry kind="lib" path="lib/org-apache-commons-logging.jar"/>
 	<classpathentry kind="lib" path="lib/serializer-2.7.2.jar"/>
-	<classpathentry kind="lib" path="lib/smtp.jar"/>
 	<classpathentry kind="lib" path="lib/testng-6.9.4.jar"/>
 	<classpathentry kind="lib" path="lib/xalan-2.7.2.jar"/>
 	<classpathentry kind="output" path="bin"/>

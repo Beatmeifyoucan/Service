@@ -1,12 +1,14 @@
 <?xml version="1.0"?>
 <project name="ant-jmeter" default="all">
 
+	<!-- SETTING PROPERTIES HERE  -->
 	<property name="src.dir" location="src" />
 	<property name="bin.dir" location="bin" />
 	<property name="dist.dir" location="dist" />
 	<property name="lib.dir" location="lib" />
 	<property name="resources.dir" location="resources" />
 
+	<!-- SETTING CLASSPATH HERE  -->
 	<path id="cp">
 		<pathelement location="${lib.dir}/jcommander.jar" />
 		<pathelement location="${lib.dir}/testng-6.9.4.jar" />
@@ -17,20 +19,28 @@
 		<pathelement location="${bin.dir}" />
 	</path>
 
-	<!-- Allow jar to be picked up locally -->
+	<!-- SETTING JMETER CLASSPATH HERE  -->
 	<path id="jmeter.classpath">
 		<fileset dir="${basedir}/jmeter/bin">
 			<include name="ApacheJMeter.jar" />
 		</fileset>
 	</path>
+	
+	<!-- SETTING COMPILE-TIME CLASSPATH HERE  -->
+	<path id="compile.classpath">
+		<fileset dir="${lib.dir}">
+			<include name="*.jar" />
+		</fileset>
+	</path>
 
+	<!-- SETTING TEST-NG TASK DEFINITION HERE  -->
 	<taskdef name="testng" classname="org.testng.TestNGAntTask">
 		<classpath>
 			<pathelement location="${lib.dir}/testng-6.9.4.jar"></pathelement>
 		</classpath>
 	</taskdef>
 
-
+	<!-- SETTING MAIL TASK DEFINITION HERE  -->
 	<taskdef name="mail" classname="org.apache.tools.ant.taskdefs.email.EmailTask">
 		<classpath>
 			<pathelement path="${lib.dir}/ant-javamail-1.9.6.jar" />
@@ -39,7 +49,7 @@
 		</classpath>
 	</taskdef>
 
-
+	<!-- SETTING JMETER TASK DEFINITION HERE  -->
 	<taskdef name="jmeter"
 		classname="org.programmerplanet.ant.taskdefs.jmeter.JMeterTask">
 		<classpath>
@@ -48,11 +58,6 @@
 	</taskdef>
 
 
-	<path id="compile.classpath">
-		<fileset dir="${lib.dir}">
-			<include name="*.jar" />
-		</fileset>
-	</path>
 
 	<property name="report.title" value="Load Test Results" />
 
