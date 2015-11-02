@@ -47,7 +47,7 @@
 				<include name="**/*.jar" />
 			</fileset>
 	</path>
-		
+	
 	<taskdef name="mail" classname="org.apache.tools.ant.taskdefs.email.EmailTask">
 			<classpath refid= "mail.classpath"/>
 	</taskdef>
@@ -151,9 +151,8 @@
 	</target>
 
 	<target name="mail" description="Sending mail to stakeholders">
-		<get dest="${user.home}/.ant/lib/apache-ant-1.8.2.jar"  src="http://search.maven.org/remotecontent?filepath=org/apache/ant/ant/1.8.2/apache-ant-1.8.2.jar" />
-		<mail mailhost="bagate.verizon.com" subject="End 2 End Automation Testing">
-		 	<from address="jagan.kumar.rajamani@verizon.com"/>
+		<mail charset="ISO-8859-1" mailhost="bagate.verizon.com" subject="End 2 End Automation Testing">
+			<from address="jagan.kumar.rajamani@verizon.com"/>
 		  	<replyto address="vignesh.velappan@verizon.com"/>
 		  	<to address="vignesh.velappan@verizon.com"/>
 		 	 <message>Please refer the attachment for recent automation test results</message>
