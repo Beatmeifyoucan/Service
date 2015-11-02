@@ -28,7 +28,14 @@
 	<!-- SETTING COMPILE-TIME CLASSPATH HERE  -->
 	<path id="compile.classpath">
 		<fileset dir="${lib.dir}">
-			<include name="*.jar" />
+			<include name="javamail-mailapi-1.4.2.jar" />
+			<include name="*jcommander.jar" />
+			<include name="*jsoup-1.7.2.jar" />
+			<include name="*mysql-connector-java-5.1.22-bin.jar" />
+			<include name="*testng-6.9.4.jar" />
+			<include name="*serializer-2.7.2.jar" />
+			<include name="*xalan-2.7.2.jar" />
+			<include name="*ant-jmeter-1.1.1.jar" />
 		</fileset>
 	</path>
 
