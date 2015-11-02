@@ -47,6 +47,7 @@
 	<taskdef name="mail" classname="org.apache.tools.ant.taskdefs.email.EmailTask">
 		<classpath>
 			<pathelement path="${user.home}/.ant/lib/mail-1.4.4.jar" />
+			<pathelement path="${user.home}/.ant/lib/ant-javamail-1.6.5.jar" />
 			<pathelement path="${user.home}/.ant/lib/activation-1.1.jar" />
 			<pathelement path="${lib.dir}/ant-1.8.2.jar" />
 			<pathelement path="${lib.dir}/ant-javamail-1.6.5.jar" />
@@ -154,8 +155,9 @@
 	<target name="install-jars">
 		<mkdir dir="${user.home}/.ant/lib"/>
 		<get dest="${user.home}/.ant/lib/mail-1.4.4.jar"       src="http://search.maven.org/remotecontent?filepath=javax/mail/mail/1.4.4/mail-1.4.4.jar"/>
+		<get dest="${user.home}/.ant/lib/ant-javamail-1.6.5.jar"       src="http://search.maven.org/remotecontent?filepath=ant/ant-javamail/1.6.5/ant-javamail-1.6.5.jar"/>
 		<get dest="${user.home}/.ant/lib/activation-1.1.jar" src="http://search.maven.org/remotecontent?filepath=javax/activation/activation/1.1/activation-1.1.jar"/>
-		</target>
+	</target>
 	
 	<target name="report" depends="xslt-report">
 		<echo>Report generated at ${report.datestamp}</echo>
