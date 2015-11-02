@@ -49,7 +49,9 @@
 
 	<target name="install-jars">
 		<copy todir="${user.home}/.ant/lib" >  
-		        <fileset dir="${lib.dir}" includes="javamail-mailapi-1.4.2.jar"/>  
+		        <fileset dir="${lib.dir}" includes="javamail-mailapi-1.4.2.jar">
+		        	<exclude name="**/*.jar"/>
+		        </fileset>	
 		 </copy>
 	</target>
 	
@@ -84,7 +86,7 @@
 	</condition>
 
 	<target name="clean"
-		description="Deleting class files, resulted jar, jtl and html ..." depends = "mail">
+		description="Deleting class files, resulted jar, jtl and html ...">
 		<delete dir="${bin.dir}" />
 		<delete dir="${dist.dir}" />
 		<delete file="Test.html" />
@@ -174,7 +176,7 @@
 	</path>
 	
 	
-	<target name="all" depends="main,run,report" />
+	<target name="all" depends="main,run,report,mail" />
 
 	<!--<property name="lib.dir" value="${jmeter.home}/lib" /> -->
 

@@ -2,24 +2,24 @@
 <testng-results skipped="0" failed="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Ant suite" duration-ms="7" started-at="2015-11-02T18:07:50Z" finished-at="2015-11-02T18:07:50Z">
+  <suite name="Ant suite" duration-ms="7" started-at="2015-11-02T18:21:08Z" finished-at="2015-11-02T18:21:08Z">
     <groups>
     </groups>
-    <test name="Ant test" duration-ms="7" started-at="2015-11-02T18:07:50Z" finished-at="2015-11-02T18:07:50Z">
+    <test name="Ant test" duration-ms="7" started-at="2015-11-02T18:21:08Z" finished-at="2015-11-02T18:21:08Z">
       <class name="TestCase1">
-        <test-method status="PASS" signature="serviceCall()[pri:0, instance:TestCase1@4947c4ee]" name="serviceCall" duration-ms="4" started-at="2015-11-02T10:07:50Z" finished-at="2015-11-02T10:07:50Z">
+        <test-method status="PASS" signature="serviceCall()[pri:0, instance:TestCase1@1eac6995]" name="serviceCall" duration-ms="4" started-at="2015-11-02T10:21:08Z" finished-at="2015-11-02T10:21:08Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- serviceCall -->
       </class> <!-- TestCase1 -->
     </test> <!-- Ant test -->
   </suite> <!-- Ant suite -->
-  <suite name="Test-All" duration-ms="77" started-at="2015-11-02T18:07:50Z" finished-at="2015-11-02T18:07:50Z">
+  <suite name="Test-All" duration-ms="90" started-at="2015-11-02T18:21:08Z" finished-at="2015-11-02T18:21:08Z">
     <groups>
     </groups>
-    <test name="TestGroup" duration-ms="77" started-at="2015-11-02T18:07:50Z" finished-at="2015-11-02T18:07:50Z">
+    <test name="TestGroup" duration-ms="90" started-at="2015-11-02T18:21:08Z" finished-at="2015-11-02T18:21:08Z">
       <class name="TestCase1">
-        <test-method status="PASS" signature="serviceCall()[pri:0, instance:TestCase1@113ee167]" name="serviceCall" duration-ms="53" started-at="2015-11-02T10:07:50Z" finished-at="2015-11-02T10:07:50Z">
+        <test-method status="PASS" signature="serviceCall()[pri:0, instance:TestCase1@2e4e3801]" name="serviceCall" duration-ms="62" started-at="2015-11-02T10:21:08Z" finished-at="2015-11-02T10:21:08Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- serviceCall -->
