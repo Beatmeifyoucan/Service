@@ -1,7 +1,6 @@
 import java.io.File;
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
@@ -19,7 +18,6 @@ public class Parser {
 	public void main(String[] args) throws ClassNotFoundException, SQLException{
 		try{
 			list = new ArrayList<String>();
-			
 			ClassLoader classLoader = getClass().getClassLoader();
 			File input = new File(classLoader.getResource("Test.html").getFile());
 			Document doc = Jsoup.parse(input, "UTF-8", "http://example.com/");
@@ -31,7 +29,6 @@ public class Parser {
 			}catch(Exception excep){
 				System.out.println("EXCEPTION OCCURRED WHILE PARSING THE DATA !!! ");
 			}
-		
 		dbCall(list);
 	}
 	
@@ -47,12 +44,8 @@ public class Parser {
 	      String sql;
 	      sql = "insert into report values('"+list.get(0)+"', '"+list.get(1)+"','"+list.get(2)+"','"+list.get(3)+"','"+list.get(4)+"','"+list.get(5)+"')";
 	      System.out.println("SQL QUERY = " + sql);
-	      ResultSet rs = stmt.executeQuery(sql);
-	      while(rs.next()){
-	    	  System.out.println(rs.getInt(1));
-	    	  System.out.println(rs.getString(2));
-	    	  System.out.println(rs.getString(3));
-	      }
+	      stmt.executeUpdate(sql);
+	      System.out.println("QUERY EXECUTED SUCCESSFULLY ...");
 	}
 	
 }
