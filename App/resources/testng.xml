@@ -3,7 +3,6 @@
  <test name ="TestGroup">
  	<classes>
  		<class name="TestCase1"/>
- 		<class name="TestCase2"/>
  	</classes>
  </test>
 </suite>

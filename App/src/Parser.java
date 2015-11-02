@@ -16,10 +16,11 @@ public class Parser {
 	private static List<String> list = null;
 	static Connection conn = null;
 	static Statement stmt = null;
-	public static void main(String[] args) throws ClassNotFoundException, SQLException{
+	public void main(String[] args) throws ClassNotFoundException, SQLException{
 		try{
 			list = new ArrayList<String>();
-			File input = new File("Test.html");
+			ClassLoader classLoader = getClass().getClassLoader();
+			File input = new File(classLoader.getResource("Test.html").getFile());
 			Document doc = Jsoup.parse(input, "UTF-8", "http://example.com/");
 			Element content = doc.getElementsByClass("details").get(0);
 			Element trTag = content.select("tr").get(1);

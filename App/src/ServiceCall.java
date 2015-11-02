@@ -24,6 +24,8 @@ public class ServiceCall {
 				response.append(inputLine);
 			}
 			
+			Parser parserObj = new Parser();
+			parserObj.main(null);
 		}catch(Exception excep){
 			excep.printStackTrace();
 		}
