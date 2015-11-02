@@ -26,7 +26,7 @@
 	
 	<!-- SETTING MAIL TASK DEFINITION HERE  -->
 	<path id="mail.classpath">
-			<fileset dir="${basedir}/mail/bin">
+			<fileset dir="${lib.dir}">
 				<include name="javamail-mailapi-1.4.2.jar" />
 			</fileset>
 	</path>
@@ -47,9 +47,6 @@
 	</taskdef>
 
 
-	<taskdef name="mail" classname="org.apache.tools.ant.taskdefs.email.EmailTask">
-			<classpath refid= "mail.classpath"/>
-	</taskdef>
 
 	<!-- SETTING JMETER TASK DEFINITION HERE  -->
 	<taskdef name="jmeter"
@@ -59,6 +56,13 @@
 		</classpath>
 	</taskdef>
 
+
+	<taskdef name="mail" classname="org.apache.tools.ant.taskdefs.email.EmailTask">
+		<classpath>
+			<pathelement path="${lib.dir}/javamail-mailapi-1.4.2.jar" />
+		</classpath>
+	</taskdef>
+	
 
 	<property name="report.title" value="Load Test Results" />
 
@@ -166,7 +170,7 @@
 	
 	<target name="all" depends="main,run,report,mail" />
 
-	<!-- <property name="lib.dir" value="${jmeter.home}/lib" />  -->
+	<!--<property name="lib.dir" value="${jmeter.home}/lib" /> -->
 
 	<!-- Use xalan copy from JMeter lib directory to ensure consistent processing 
 		with Java 1.4+ -->
