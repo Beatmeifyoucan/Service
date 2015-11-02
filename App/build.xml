@@ -166,7 +166,7 @@
 	
 	<target name="all" depends="main,run,report,mail" />
 
-	<property name="lib.dir" value="${jmeter.home}/lib" />
+	<!-- <property name="lib.dir" value="${jmeter.home}/lib" />  -->
 
 	<!-- Use xalan copy from JMeter lib directory to ensure consistent processing 
 		with Java 1.4+ -->
