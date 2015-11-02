@@ -5,7 +5,6 @@ before_script:
 script: cd App; ant all; cd -
 jdk:
   - oraclejdk7
-  - oraclejdk8
 services:
   - mysql
 deploy:
