@@ -13,6 +13,8 @@
 		<pathelement location="${lib.dir}/jcommander.jar" />
 		<pathelement location="${lib.dir}/testng-6.9.4.jar" />
 		<pathelement location="${lib.dir}/mysql-connector-java-5.1.22-bin.jar" />
+		<pathelement location="${user.home}/.ant/lib/mail-1.4.4.jar" />
+		<pathelement location="${user.home}/.ant/lib/activation-1.1.jar" />
 		<pathelement location="${lib.dir}/mail.jar" />
 		<pathelement location="${lib.dir}/activation.jar" />
 		<pathelement location="${lib.dir}/ant-javamail-1.6.5.jar" />
@@ -44,6 +46,8 @@
 	<!-- SETTING MAIL TASK DEFINITION HERE  -->
 	<taskdef name="mail" classname="org.apache.tools.ant.taskdefs.email.EmailTask">
 		<classpath>
+			<pathelement path="${user.home}/.ant/lib/mail-1.4.4.jar" />
+			<pathelement path="${user.home}/.ant/lib/activation-1.1.jar" />
 			<pathelement path="${lib.dir}/ant-1.8.2.jar" />
 			<pathelement path="${lib.dir}/ant-javamail-1.6.5.jar" />
 			<pathelement path="${lib.dir}/mail.jar" />
@@ -156,9 +160,6 @@
 	<target name="report" depends="xslt-report">
 		<echo>Report generated at ${report.datestamp}</echo>
 	</target>
-
-	
-	
 
 	<target name="mail" description="Sending mail to stakeholders ..." depends ="install-jars">
 		<mail from="jagan.kumar.rajamani@verizon.com" tolist="vignesh.velappan@verizon.com"
