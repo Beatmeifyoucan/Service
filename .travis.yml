@@ -1,7 +1,7 @@
 language: java
 install: cd App; ant deps; cd -
 before_script:
- - mysql -e 'create database IF NOT EXISTS myapp_test;use myapp_test;create table employee(id int, name varchar(20), company varchar(20)); insert into employee values (100, "Manju", "verizon");'
+ - mysql -e 'create database IF NOT EXISTS myapp_test;use myapp_test;create table report(noOfThreads varchar(5),failureRate varchar(20), successRate varchar(20), avgTime varchar(20), minTime varchar(20), maxTime varchar(20));create table employee(id int, name varchar(20), company varchar(20)); insert into employee values (100, "Manju", "verizon");'
 script: cd App; ant all; cd -
 jdk:
   - oraclejdk7
