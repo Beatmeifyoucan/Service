@@ -27,7 +27,6 @@ public class Parser {
 				list.add(s.text());
 			}
 			}catch(Exception excep){
-				System.out.println("EXCEPTION OCCURRED WHILE PARSING THE DATA !!! ");
 			}
 		dbCall(list);
 	}

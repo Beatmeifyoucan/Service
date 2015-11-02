@@ -16,6 +16,7 @@
 		<pathelement location="${lib.dir}/mail.jar" />
 		<pathelement location="${lib.dir}/activation.jar" />
 		<pathelement location="${lib.dir}/ant-javamail-1.9.6.jar" />
+		<pathelement location="${lib.dir}/ant-1.8.2.jar" />
 		<pathelement location="${bin.dir}" />
 	</path>
 
@@ -43,6 +44,7 @@
 	<!-- SETTING MAIL TASK DEFINITION HERE  -->
 	<taskdef name="mail" classname="org.apache.tools.ant.taskdefs.email.EmailTask">
 		<classpath>
+			<pathelement path="${lib.dir}/ant-1.8.2.jar" />
 			<pathelement path="${lib.dir}/ant-javamail-1.9.6.jar" />
 			<pathelement path="${lib.dir}/mail.jar" />
 			<pathelement path="${lib.dir}/activation.jar" />

@@ -20,5 +20,6 @@
 	<classpathentry kind="lib" path="lib/ant-javamail-1.6.5.jar"/>
 	<classpathentry kind="lib" path="lib/activation.jar"/>
 	<classpathentry kind="lib" path="lib/mail.jar"/>
+	<classpathentry kind="lib" path="lib/ant-1.8.2.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
