@@ -55,8 +55,6 @@
 		 </copy>
 	</target>
 	
-	
-
 	<property name="report.title" value="Load Test Results" />
 
 	<!-- Name of test (without .jmx) -->
