@@ -13,7 +13,6 @@
 		<pathelement location="${lib.dir}/jcommander.jar" />
 		<pathelement location="${lib.dir}/testng-6.9.4.jar" />
 		<pathelement location="${lib.dir}/mysql-connector-java-5.1.22-bin.jar" />
-		<pathelement location="${lib.dir}/javamail-mailapi-1.4.2.jar" />
 		<pathelement location="${bin.dir}" />
 	</path>
 	
@@ -22,8 +21,14 @@
 	<path id="jmeter.classpath">
 		<fileset dir="${basedir}/jmeter/bin">
 			<include name="ApacheJMeter.jar" />
-			
 		</fileset>
+	</path>
+	
+	<!-- SETTING MAIL TASK DEFINITION HERE  -->
+	<path id="mail.classpath">
+			<fileset dir="${basedir}/mail/bin">
+				<include name="javamail-mailapi-1.4.2.jar" />
+			</fileset>
 	</path>
 	
 
@@ -42,13 +47,6 @@
 	</taskdef>
 
 
-	<!-- SETTING MAIL TASK DEFINITION HERE  -->
-	<path id="mail.classpath">
-			<fileset dir="${lib.dir}">
-				<include name="javamail-mailapi-1.4.2.jar" />
-			</fileset>
-	</path>
-	
 	<taskdef name="mail" classname="org.apache.tools.ant.taskdefs.email.EmailTask">
 			<classpath refid= "mail.classpath"/>
 	</taskdef>
