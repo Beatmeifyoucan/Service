@@ -24,6 +24,7 @@ public class Parser {
 			Element content = doc.getElementsByClass("details").get(0);
 			Element trTag = content.select("tr").get(1);
 			for(Element s : trTag.select("td")){
+				System.out.println("EXTRACTING DATA .. " + s.text());
 				list.add(s.text());
 			}
 			}catch(Exception excep){
@@ -33,8 +34,8 @@ public class Parser {
 	
 	
 	public static void dbCall(List<String> list) throws ClassNotFoundException, SQLException{
-		  list.add(0,"30");list.add(1,"0");list.add(2,"100.00%");	
-		  list.add(3,"124 ms");list.add(4,"62 ms");list.add(5,"353 ms");
+		  if(list.size() > 0)
+			list.add(0,"30");list.add(1,"0");list.add(2,"100.00%");	list.add(3,"124 ms");list.add(4,"62 ms");list.add(5,"353 ms");
 		  Class.forName("com.mysql.jdbc.Driver");
 	      System.out.println("Connecting to database...");
 	      conn = DriverManager.getConnection("jdbc:mysql://127.0.0.1/myapp_test","travis","");
