@@ -44,7 +44,7 @@
 	<!-- SETTING MAIL TASK DEFINITION HERE  -->
 	<path id="mail.classpath">
 			<fileset dir="${lib.dir}">
-				<include name="**/*.jar" />
+				<include name="javamail-mailapi-1.4.2.jar" />
 			</fileset>
 	</path>
 	
