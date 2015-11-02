@@ -1,13 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Test-All" duration-ms="441" started-at="2015-11-02T09:38:26Z" finished-at="2015-11-02T09:38:26Z">
+  <suite name="Ant suite" duration-ms="33" started-at="2015-11-02T11:40:01Z" finished-at="2015-11-02T11:40:01Z">
     <groups>
     </groups>
-    <test name="TestGroup" duration-ms="441" started-at="2015-11-02T09:38:26Z" finished-at="2015-11-02T09:38:26Z">
+    <test name="Ant test" duration-ms="33" started-at="2015-11-02T11:40:01Z" finished-at="2015-11-02T11:40:01Z">
       <class name="TestCase1">
-        <test-method status="PASS" signature="serviceCall()[pri:0, instance:TestCase1@564dcd29]" name="serviceCall" duration-ms="411" started-at="2015-11-02T01:38:26Z" finished-at="2015-11-02T01:38:26Z">
+        <test-method status="PASS" signature="serviceCall()[pri:0, instance:TestCase1@14d0ba03]" name="serviceCall" duration-ms="31" started-at="2015-11-02T03:40:01Z" finished-at="2015-11-02T03:40:01Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- serviceCall -->
+      </class> <!-- TestCase1 -->
+    </test> <!-- Ant test -->
+  </suite> <!-- Ant suite -->
+  <suite name="Test-All" duration-ms="50" started-at="2015-11-02T11:40:01Z" finished-at="2015-11-02T11:40:01Z">
+    <groups>
+    </groups>
+    <test name="TestGroup" duration-ms="50" started-at="2015-11-02T11:40:01Z" finished-at="2015-11-02T11:40:01Z">
+      <class name="TestCase1">
+        <test-method status="PASS" signature="serviceCall()[pri:0, instance:TestCase1@3ef631d8]" name="serviceCall" duration-ms="34" started-at="2015-11-02T03:40:01Z" finished-at="2015-11-02T03:40:01Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- serviceCall -->

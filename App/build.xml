@@ -15,7 +15,7 @@
 		<pathelement location="${lib.dir}/mysql-connector-java-5.1.22-bin.jar" />
 		<pathelement location="${lib.dir}/mail.jar" />
 		<pathelement location="${lib.dir}/activation.jar" />
-		<pathelement location="${lib.dir}/ant-javamail-1.9.6.jar" />
+		<pathelement location="${lib.dir}/ant-javamail-1.6.5.jar" />
 		<pathelement location="${lib.dir}/ant-1.8.2.jar" />
 		<pathelement location="${bin.dir}" />
 	</path>
@@ -45,12 +45,14 @@
 	<taskdef name="mail" classname="org.apache.tools.ant.taskdefs.email.EmailTask">
 		<classpath>
 			<pathelement path="${lib.dir}/ant-1.8.2.jar" />
-			<pathelement path="${lib.dir}/ant-javamail-1.9.6.jar" />
+			<pathelement path="${lib.dir}/ant-javamail-1.6.5.jar" />
 			<pathelement path="${lib.dir}/mail.jar" />
 			<pathelement path="${lib.dir}/activation.jar" />
 		</classpath>
 	</taskdef>
+	
 
+	
 	<!-- SETTING JMETER TASK DEFINITION HERE  -->
 	<taskdef name="jmeter"
 		classname="org.programmerplanet.ant.taskdefs.jmeter.JMeterTask">
@@ -111,7 +113,7 @@
 	<target name="test" depends="compile">
 		<testng classpathref="cp" useDefaultListeners="true">
 			<classpath location="${bin.dir}" />
-			<classfileset dir="${bin.dir}" includes="NewTestCase1.class" />
+			<classfileset dir="${bin.dir}" includes="TestCase1.class" />
 			<xmlfileset dir="${resources.dir}" includes="testng.xml" />
 		</testng>
 	</target>
@@ -145,12 +147,21 @@
 		</jmeter>
 	</target>
 
+	<target name="install-jars">
+		<mkdir dir="${user.home}/.ant/lib"/>
+		<get dest="${user.home}/.ant/lib/mail.jar"       src="http://search.maven.org/remotecontent?filepath=javax/mail/mail/1.4.4/mail.jar"/>
+		<get dest="${user.home}/.ant/lib/activation.jar" src="http://search.maven.org/remotecontent?filepath=javax/activation/activation/1.1/activation.jar"/>
+		<get dest="${user.home}/.ant/lib/activation.jar" src="http://search.maven.org/remotecontent?filepath=javax/activation/activation/1.1/ant-javamail-1.6.5.jar"/>
+		</target>
+	
 	<target name="report" depends="xslt-report">
 		<echo>Report generated at ${report.datestamp}</echo>
 	</target>
 
+	
+	
 
-	<target name="mail" description="Sending mail to stakeholders ...">
+	<target name="mail" description="Sending mail to stakeholders ..." depends ="install-jars">
 		<mail from="jagan.kumar.rajamani@verizon.com" tolist="vignesh.velappan@verizon.com"
 			mailhost="bagate.verizon.com" subject="End 2 End Automation Testing"
 			message="Please refer the attachment for recent automation test results .. "
