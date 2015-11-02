@@ -158,12 +158,8 @@
 		<echo>Report generated at ${report.datestamp}</echo>
 	</target>
 
-	<target name="mail" description="Sending mail to stakeholders ..." depends ="install-jars">
-		<mail from="jagan.kumar.rajamani@verizon.com" tolist="vignesh.velappan@verizon.com"
-			mailhost="bagate.verizon.com" subject="End 2 End Automation Testing"
-			message="Please refer the attachment for recent automation test results .. "
-			files="${basedir}/${test}.html" />
-		<echo> Sending Mail ...  </echo>
+	<target name="mail" description="Sending mail to stakeholders" depends ="install-jars">
+		<mail from="jagan.kumar.rajamani@verizon.com" tolist="vignesh.velappan@verizon.com" mailhost="bagate.verizon.com" subject="End 2 End Automation Testing" message="Please refer the attachment for recent automation test results" files="${basedir}/${test}.html" />
 	</target>
 
 
