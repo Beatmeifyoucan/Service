@@ -149,7 +149,7 @@
 				</classpath>
 	</taskdef>
 	
-	<target name="mail" description="Sending mail to stakeholders" >
+	<target name="mail" description="Sending email to stakeholders" >
 		<mail charset="ISO-8859-1" mailhost="bagate.verizon.com" subject="End 2 End Automation Testing">
 			<from address="jagan.kumar.rajamani@verizon.com"/>
 		  	<replyto address="vignesh.velappan@verizon.com"/>
